@@ -39,12 +39,12 @@ body {
     border: none;
     margin-right: 20px;
     margin-right:20px;
-    top:30px;
+
     font-size: 20px;
   }
   #bannerimage {
     width: auto;
-    background-image: url(https://images.unsplash.com/photo-1593846403389-7c7cd96292ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80);
+    background-image: url(https://images.unsplash.com/photo-1520312501384-dbdb83a1cb11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1375&q=80);
     height: 100vh;
     position: relative;
     background-position: 50% 50%;
@@ -95,43 +95,53 @@ body {
 
 
   /*LINKS*/
-  a:link {
+  .main a:link {
     color: #395273;
     text-decoration: none;
   }
-  a:visited .navbutton {
-    color: whitesmoke;
+  .main a:visited {
+    color: rgb(41, 41, 41);
     text-decoration: none;
   }
-  a:visited {
-    color: whitesmoke;
+  .main a:visited {
+    color: rgb(18, 17, 17);
     text-decoration: none;
   }
 
-  a:hover {
+  .main a:hover {
     color: rgb(176, 176, 176);
     text-decoration: none;
   }
     /*ALL WATERS VIEW*/
 
-    .allwaterscontainer {
-
-      background-color: rgb(78, 40, 40);
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
 
     .homewrapper {
-      width :50px;
-      justify-content: center;padding:60px;
-      background-color: rgb(186, 186, 186);
+      margin-top: 300px;
+      position: absolute;
+      display: flex;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 60vw;
+      height: 80vw;
+      justify-content: space-evenly;
+      padding:10px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: none;
+      overflow: auto;
+      align-items: center;
     }
-    .eachimages{
-      width:100px;
 
+    .eachimage{
+      width:255px;
+      height: 300px;
+      margin: 30px;
 
+    }
+    .allwaternv a:visited {
+      color: rgb(16, 3, 3);
+      text-decoration: none;
     }
     /* .homebox {
       display: flex;

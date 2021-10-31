@@ -9,14 +9,50 @@ class AllWaters extends Component {
   }
   render() {
     return (
-      <div><NavBar className='allwatersnav'>this is the nav</NavBar>
       <div className='allwaterscontainer'>
-        <div>hello</div>
-        <div className='homewrapper'>
+        <div className='main'>
+          <NavBar className='allwaternav'></NavBar>
+          <div className='homewrapper'>
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
 
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
+            <div className='col'>
+              <img
+                className='eachimage'
+                src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
+              />
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     );
   }
 }

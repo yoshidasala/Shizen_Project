@@ -14,7 +14,7 @@ class Home extends Component {
               <h1 className='welcome'>SHIZEN</h1>
             </Link>{" "}
             <h3 className='welcome2'> our planets most powerful force</h3>
-            <NavBar></NavBar>
+            <NavBar className = "homenav"></NavBar>
           </div>
         </div>
       </div>

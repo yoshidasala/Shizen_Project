@@ -1,5 +1,4 @@
 import React from "react";
-import AllWaters from "./AllWaters";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
 import NavBar from "./NavBar";
