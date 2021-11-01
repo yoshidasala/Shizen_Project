@@ -23,6 +23,7 @@ class AllWaters extends Component {
             color='textSecondary'
             align='center'
             gutterBottom
+            className = "pagetitle"
           >
             SUI . WATER
           </Typography>

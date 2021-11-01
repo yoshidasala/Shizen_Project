@@ -123,6 +123,21 @@ body {
       width:50%;
       align-items:center;
     }
+    .pagetitle{
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
 
 
     .homewrapper {
@@ -151,24 +166,11 @@ body {
       width:255px;
       height: 300px;
       padding: 6%;
-
-
-
-
-
     }
     .allwaternv a:visited {
       color: rgb(16, 3, 3);
       text-decoration: none;
     }
-   .mizu{
-    display:block;
-    font-style: normal;
-    font-family: "Work Sans", sans-serif;
-    top: 50%;
-    left: 80%;
-    color: rgb(22, 5, 2);
-  }
   .spacer{
     margin-top:30px ;
   }
