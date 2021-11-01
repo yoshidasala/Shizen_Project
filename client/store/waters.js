@@ -1,21 +1,21 @@
-import axios from 'axios'
-const TOKEN = 'token'
+import axios from "axios";
+const TOKEN = "token";
 
 /**
  * ACTION TYPES
  */
-const SET_WATERS = 'SET_WATERS'
+const SET_WATERS = "SET_WATERS";
 
 /**
  * ACTION CREATORS
  */
-const set_Waters = (waters) => ({type: SET_WATERS ,waters})
+const set_Waters = (waters) => ({ type: SET_WATERS, waters });
 
 /**
  * THUNK CREATORS
  */
 
- export const fetchProjects = () => {
+export const fetchWaters = () => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get("/api/waters");
@@ -28,11 +28,11 @@ const set_Waters = (waters) => ({type: SET_WATERS ,waters})
 /**
  * REDUCER
  */
-export default function(state = {}, action) {
+export default function (state = {}, action) {
   switch (action.type) {
     case SET_WATERS:
-      return action.waters
+      return action.waters;
     default:
-      return state
+      return state;
   }
 }

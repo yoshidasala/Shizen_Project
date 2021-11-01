@@ -1,7 +1,13 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@400;800&family=Quicksand:wght@300;400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+
+
 * {
   box-sizing: border-box;
-  color: #395273;
+  color: #292930;
   font-family: "Montserrat", sans-serif;
+  font-family: 'Open Sans';
 }
 body {
   background: #f5f4f0;
@@ -9,12 +15,13 @@ body {
   margin-right: 0px;
   margin-left: 0px;
   margin-bottom: 0px;
+  font-family: 'Open Sans';
 }
 /*////////////////////////////////PHONE STYLE/////////////////////////
 //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////// */
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 300px) {
   .homepagecontainer {
     width: 100%;
   }
@@ -40,9 +47,15 @@ body {
     margin-right: 20px;
     margin-right:20px;
 
-    font-size: 20px;
+
+    font-size: 40px;
   }
-  #bannerimage {
+  .navbuttontxt{
+    text-decoration: none;
+
+  }
+
+  .bannerimage {
     width: auto;
     background-image: url(https://images.unsplash.com/photo-1520312501384-dbdb83a1cb11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1375&q=80);
     height: 100vh;
@@ -94,67 +107,71 @@ body {
   }
 
 
-  /*LINKS*/
-  .main a:link {
-    color: #395273;
-    text-decoration: none;
-  }
-  .main a:visited {
-    color: rgb(41, 41, 41);
-    text-decoration: none;
-  }
-  .main a:visited {
-    color: rgb(18, 17, 17);
-    text-decoration: none;
-  }
-
-  .main a:hover {
-    color: rgb(176, 176, 176);
-    text-decoration: none;
-  }
     /*ALL WATERS VIEW*/
+    .pagecontainer{
+      height:100vh;
+    }
+
+    header{
+      position: relative;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width:50%;
+      align-items:center;
+    }
 
 
     .homewrapper {
       margin-top: 300px;
       position: absolute;
       display: flex;
-      top: 30%;
+      top: 70%;
       left: 50%;
       transform: translate(-50%,-50%);
-      width: 60vw;
-      height: 80vw;
-      justify-content: space-evenly;
-      padding:10px;
+      height: 90vh;
       flex-direction: row;
       flex-wrap: wrap;
-      border: none;
       overflow: auto;
       align-items: center;
+      flex: 1;
+      align-content:center
+
+    }
+    .blocks{
+      display:flex;
+      align-items: center;
+
     }
 
     .eachimage{
       width:255px;
       height: 300px;
-      margin: 30px;
+      padding: 6%;
+
+
+
+
 
     }
     .allwaternv a:visited {
       color: rgb(16, 3, 3);
       text-decoration: none;
     }
-    /* .homebox {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid grey;
-      width: 300px;
-      min-width: 1080px;
-      gap: 3px;
-    } */
-
-
-
-
+   .mizu{
+    display:block;
+    font-style: normal;
+    font-family: "Work Sans", sans-serif;
+    top: 50%;
+    left: 80%;
+    color: rgb(22, 5, 2);
+  }
+  .spacer{
+    margin-top:30px ;
+  }
 
 }
 

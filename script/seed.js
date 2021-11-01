@@ -5,10 +5,22 @@ const { green, red } = require("chalk");
 
 const waters = [
   {
-    name: "Green Moon",
+    name: "Sendai",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/1200px-Picture_icon_BLACK.svg.png",
+      "https://images.unsplash.com/photo-1615839377917-bc950e77a6d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1126&q=80",
+  },
+  {
+    name: "Kawarahashi",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1614281195492-55ac268424d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=679&q=80",
+  },
+  {
+    name: "Sonomama",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1598751654513-bd903cff4b0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
 ];
 

@@ -7,6 +7,7 @@ module.exports = {
     path: __dirname,
     filename: "./public/bundle.js",
   },
+  mode: "production",
   devtool: "source-map",
   module: {
     rules: [
