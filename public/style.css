@@ -124,17 +124,19 @@ body {
       align-items:center;
     }
     .pagetitle{
-      animation-duration: 4s;
+      animation-duration: 3s;
       animation-name: slideintextleft;
-      animation-delay: 0.02s;
+      animation-delay: 0.01s;
+      -webkit-animation-timing-function: ease-in-out;
+
 
     }
     .pagetext{
-      animation-duration: 4s;
+      animation-duration: 3s;
       animation-name: slideintextright;
-      animation-delay: 0.3s;
-      animation-timing-function: cubic-bezier(0.42, 0.82, 0.165, 1);
-      -webkit-animation-timing-function: linear;
+      animation-delay:  0.03s;
+      animation-timing-function: cubic-bezier(0.50, 0.90, 0.165, 0);
+      -webkit-animation-timing-function: ease-in-out;
     }
     @keyframes slideintextleft {
       from {
@@ -148,11 +150,11 @@ body {
     }
     @keyframes slideintextright {
       from {
-        transform: translateY(-800px);
+        transform: translateX(800px);
         opacity: -4
       }
       to {
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 1
       }
     }
@@ -225,14 +227,26 @@ section{
 }
 
 .blur {
-    width: 60%;
-    margin-left: 25%;
+    width: 100%;
+    margin-left: 65%;
     height: 200px;
-    background-color: #bdbbb8;
+    background-color: #d2d0ce;
     position: absolute;
     bottom: 250px;
     filter: blur(30px);
     z-index: 970;
+    animation-duration: 1s;
+  animation-name: slideblur;
+  animation-timing-function: cubic-bezier(0.50, 0.90, 0.165, 0);
+}
+
+@keyframes slideblur {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity:1
+  }
 }
 
 .blur:hover {
@@ -244,7 +258,7 @@ section{
   bottom: 250px;
   filter: blur(30px);
   z-index: 999px;
-  transform: scale(1.2);
+  transform: scale(1.0.5);
 }
 
 
@@ -308,12 +322,44 @@ section{
 }
 
 
-#particles-js{
-  height:100%;
-  background:green;
+/*////////////////////////////////other////////// */
+#rod {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 2px;
+  height: 150px;
+  border-radius: 5px;
+  transform-origin: 50% 0%;
+  transform: rotate(60deg);
+  background-color: green;
+}
 
+#pivot {
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
 }
+
+#ball {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
 }
+
+
+
+
+
+
 
 
 /*////////////////////////////////WEB STYLE/////////////////////////

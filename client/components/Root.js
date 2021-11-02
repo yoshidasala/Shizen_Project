@@ -4,7 +4,9 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import AllWaters from "./AllWaters";
 import AllMountains from "./AllMountains";
+import Other from "./Other"
 import { createTheme, ThemeProvider } from "@mui/material";
+import anime from 'animejs/lib/anime.es.js';
 
 const theme = createTheme({
   palette: {
@@ -28,6 +30,7 @@ const Root = () => {
           <Route exact path='/' component={Home} />
           <Route exact path='/waters' component={AllWaters} />
           <Route exact path='/mountains' component={AllMountains} />
+          <Route exact path='/other' component={Other} />
         </main>
       </Router>
     </ThemeProvider>

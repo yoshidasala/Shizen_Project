@@ -42,8 +42,8 @@ class AllMountains extends Component {
       <div><div className = "particles-js"></div>
         <NavBar className='allwaternav '></NavBar>
 
-        <div class='container'>
-          <div class='title'></div>
+        <div className='container'>
+          <div className='title'></div>
           <header>
             <Typography
               variant='h1'
@@ -66,18 +66,18 @@ class AllMountains extends Component {
               coexist with nature.
             </Typography>
           </header>
-          <div class='blur'></div>
-          <div class='blur'></div>
+          <div className='blur'></div>
+          <div className='blur'></div>
 
-          <div class='content'>
-            <div class='content-wrapper'>
-              <div class='content-images'>
-                <div class='content-image-wrapper two'>
-                  <img src='https://images.unsplash.com/photo-1550433251-d1a8ff40ff05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' />
+          <div className='content'>
+            <div className='content-wrapper'>
+              <div className='content-images'>
+                <div className='content-image-wrapper two'>
+                  <img className='https://images.unsplash.com/photo-1550433251-d1a8ff40ff05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' />
                   <h4>E</h4>
                 </div>
               </div>
-              <p class='text'>
+              <p className='text'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
