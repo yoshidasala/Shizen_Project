@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
+import { CardMedia } from "@mui/material";
 
 const dummydata = [
   {
@@ -38,61 +39,56 @@ class AllMountains extends Component {
 
   render() {
     return (
-      <div className='pagecontainer'>
-        <div className='spacer'></div>
-        <NavBar className='allwaternav'></NavBar>
+      <div><div className = "particles-js"></div>
+        <NavBar className='allwaternav '></NavBar>
 
-        <header>
-          <Button color='primary' size='large' onClick={this.signInWithGoogle}>
-            SIGN IN
-          </Button>
-          <Typography
-            variant='h1'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-          >
-            CHI . LAND
-          </Typography>
-          <Typography
-            variant='p'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-          >
-            Japanese people have long appreciated the presence of life in all
-            aspects of nature—from landscapes and climates that change
-            seasonally.Their reverence for natural life enables them to coexist
-            with nature.
-          </Typography>
-        </header>
+        <div class='container'>
+          <div class='title'></div>
+          <header>
+            <Typography
+              variant='h1'
+              color='textSecondary'
+              align='center'
+              gutterBottom
+              className='pagetitle'
+            >
+              CHI . LAND
+            </Typography>
+            <Typography
+              variant='p'
+              color='textSecondary'
+              align='center'
+              gutterBottom
+            >
+              Japanese people have long appreciated the presence of life in all
+              aspects of nature—from landscapes and climates that change
+              seasonally.Their reverence for natural life enables them to
+              coexist with nature.
+            </Typography>
+          </header>
+          <div class='blur'></div>
+          <div class='blur'></div>
 
-        <div className='homewrapper'>
-          <p>
-            {dummydata.map((data) => {
-              <p key={data.id}>hello</p>;
-            })}
-          </p>
-          <Grid container spacing = {3}>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>1</Paper>
-            </Grid>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>2</Paper>
-            </Grid>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>3</Paper>
-            </Grid>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>4</Paper>
-            </Grid>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>5</Paper>
-            </Grid>
-            <Grid spacing={10} item xs={12} s={6} md={6}>
-              <Paper>6</Paper>
-            </Grid>
-          </Grid>
+          <div class='content'>
+            <div class='content-wrapper'>
+              <div class='content-images'>
+                <div class='content-image-wrapper two'>
+                  <img src='https://images.unsplash.com/photo-1550433251-d1a8ff40ff05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' />
+                  <h4>E</h4>
+                </div>
+              </div>
+              <p class='text'>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries.Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a
+                type specimen book.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );

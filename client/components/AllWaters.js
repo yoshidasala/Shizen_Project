@@ -7,7 +7,6 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-
 class AllWaters extends Component {
   componentDidMount() {
     // this.props.fetchAll();
@@ -23,11 +22,17 @@ class AllWaters extends Component {
             color='textSecondary'
             align='center'
             gutterBottom
-            className = "pagetitle"
+            className='pagetitle'
           >
             SUI . WATER
           </Typography>
-          <Typography variant='p' color='main' align='center' gutterBottom>
+          <Typography
+            variant='p'
+            color='main'
+            align='center'
+            className='pagetext'
+            gutterBottom
+          >
             Japanese people have long appreciated the presence of life in all
             aspects of nature—from landscapes and climates that change
             seasonally.Their reverence for natural life enables them to coexist
@@ -38,7 +43,7 @@ class AllWaters extends Component {
         <div className='homewrapper'>
           <Grid container spacing={3} justifyContent='center'>
             <Grid item xs={12}>
-              <Paper >
+              <Paper>
                 <img
                   className='eachimage'
                   src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'

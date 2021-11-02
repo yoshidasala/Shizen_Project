@@ -19,6 +19,7 @@ function Home  (){
   const classes = useStyles()
     return (
       <div className='homepagecontainer'>
+       
         <div className='main'>
           <div className =  { `bannerimage ${classes.banner}`} >
             {" "}
