@@ -6,26 +6,57 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import Anime from "react-anime";
 
+const data = [
+  {
+    name: "Sendai",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+  },
+  {
+    name: "Kawarahashi",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+  },
+  {
+    name: "Sonomama",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+  },
+];
 class AllWaters extends Component {
   componentDidMount() {
     // this.props.fetchAll();
   }
   render() {
+    const datav = data;
+
     return (
       <div className='pagecontainer'>
-        <div className='spacer'></div>
         <NavBar className='allwaternav'></NavBar>
         <header>
-          <Typography
-            variant='h1'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-            className='pagetitle'
+          <Anime
+            easing='easeInOutSine'
+            duration={3000}
+            direction='alternate'
+            loop={false}
+            translateX='30rem'
           >
-            SUI . WATER
-          </Typography>
+            <Typography
+              variant='h1'
+              color='textSecondary'
+              align='center'
+              gutterBottom
+              className='pagetitle'
+            >
+              SUI . WATER
+            </Typography>
+          </Anime>
+
           <Typography
             variant='p'
             color='main'
@@ -39,45 +70,20 @@ class AllWaters extends Component {
             with nature.
           </Typography>
         </header>
-
         <div className='homewrapper'>
-          <Grid container spacing={3} justifyContent='center'>
-            <Grid item xs={12}>
-              <Paper>
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />{" "}
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />
-              </Paper>
-            </Grid>
-            <Grid item xs={6}>
-              <Paper>
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />
-              </Paper>
-            </Grid>
-            <Grid item xs={6}>
-              <Paper>
-                <img
-                  className='eachimage'
-                  src='https://images.unsplash.com/photo-1635598785659-60ddfb58696b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-                />
-              </Paper>
-            </Grid>
+          <Grid
+            className='imagecontainer'
+            container
+            spacing={6}
+            justifyContent='center'
+          >
+            {datav.map((each) => (
+              <Grid className='imagewrap' item xs={12}>
+                <Paper>
+                  <img className='eachimage' src={each.imageUrl} />
+                </Paper>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </div>

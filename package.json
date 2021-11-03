@@ -50,6 +50,7 @@
     "react-anime": "^4.1.1",
     "react-firebase-hooks": "^4.0.0",
     "react-redux": "^7.2.6",
+    "react-scroll": "^1.8.4",
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.0",

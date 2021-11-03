@@ -34,6 +34,7 @@ body {
     justify-content: flex-end;
     flex-direction: row;
     position: absolute;
+    z-index: 1;
   }
   .navbutton {
     background-color: Transparent;
@@ -46,6 +47,7 @@ body {
     border: none;
     margin-right: 20px;
     margin-right:20px;
+
 
 
     font-size: 40px;
@@ -109,11 +111,13 @@ body {
 
     /*ALL WATERS VIEW*/
     .pagecontainer{
-      height:100vh;
+      height:100%;
+      width: fit-content;
+
     }
 
     header{
-      position: relative;
+      position: absolute;
       top: 35%;
       left: 50%;
       transform: translate(-80%,-50%);
@@ -122,12 +126,14 @@ body {
       justify-content: space-between;
       width:50%;
       align-items:center;
+      background-color: transparent;
     }
     .pagetitle{
       animation-duration: 3s;
       animation-name: slideintextleft;
       animation-delay: 0.01s;
       -webkit-animation-timing-function: ease-in-out;
+      position: relative;
 
 
     }
@@ -161,31 +167,29 @@ body {
 
 
     .homewrapper {
+      background-color: #f5f4f0;
       margin-top: 300px;
       position: absolute;
       display: flex;
       top: 80%;
       left: 50%;
       transform: translate(-50%,-50%);
-      height: 90vh;
+      height: 100%;
       flex-direction: row;
       flex-wrap: wrap;
-      overflow: auto;
       align-items: center;
       flex: 1;
       align-content:center;
 
-    }
-    .blocks{
-      display:flex;
-      align-items: center;
 
     }
+
 
     .eachimage{
       width:255px;
       height: 300px;
-      padding: 6%;
+      padding: 0%;
+
     }
     .allwaternv a:visited {
       color: rgb(16, 3, 3);
@@ -203,6 +207,9 @@ section{
 .container{
     width: 100%;
     height: 100vh;
+    background-color:transparent;
+    color: transparent;
+
 }
 
 
@@ -219,6 +226,8 @@ section{
     width: 100%;
     height: 100%;
     bottom: 0;
+    margin: 30px;
+    padding: 50px;
 }
 
 .image-wrapper img{
@@ -226,39 +235,11 @@ section{
     height: 100%;
 }
 
-.blur {
-    width: 100%;
-    margin-left: 65%;
-    height: 200px;
-    background-color: #d2d0ce;
-    position: absolute;
-    bottom: 250px;
-    filter: blur(30px);
-    z-index: 970;
-    animation-duration: 1s;
-  animation-name: slideblur;
-  animation-timing-function: cubic-bezier(0.50, 0.90, 0.165, 0);
-}
+.imagecontainer{
+  display: flex;
+  background-color: transparent;
+z-index: 1;
 
-@keyframes slideblur {
-  from {
-    opacity: 0
-  }
-  to {
-    opacity:1
-  }
-}
-
-.blur:hover {
-  width: 60%;
-  margin-left: 35%;
-  height: 200px;
-  background-color: #bdbbb8;
-  position: absolute;
-  bottom: 250px;
-  filter: blur(30px);
-  z-index: 999px;
-  transform: scale(1.0.5);
 }
 
 
@@ -267,25 +248,24 @@ section{
     height: 100%;
     width: 100%;
     background-color: #f5f4f0;
-    z-index: 0;
-    top: 130%;
+    z-index: 2;
+    opacity: 83%;
+
     position: absolute;
+    top: 100%;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+
 }
 
-.content-wrapper{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .content-images {
-    width: 70%;
+  top: 40px;
+    padding: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -297,6 +277,7 @@ section{
     width: 150px;
     text-align: center;
     position: relative;
+
 }
 
 .content-image-wrapper img{
@@ -304,6 +285,7 @@ section{
     width: 100%;
     max-height: 100%;
     height: 100%;
+     position: relative;
 }
 
 
@@ -315,15 +297,23 @@ section{
 }
 
 .text {
-    padding-top: 100px;
+    padding: 40px;
     width: 60%;
     font-size: 0.8em;
     text-align: center;
+    position: relative;
+}
+
+.imagewrap{
+  display: flex;
+  justify-content: center;
+
+
 }
 
 
 /*////////////////////////////////other////////// */
-#rod {
+.rod {
   position: relative;
   margin-top: 50px;
   margin-left: 150px;
@@ -332,12 +322,12 @@ section{
   border-radius: 5px;
   transform-origin: 50% 0%;
   transform: rotate(60deg);
-  background-color: green;
+  background-color:white;
 }
 
-#pivot {
+.pivot {
   position: absolute;
-  top: -5px;
+  top: 400px;
   left: -3px;
   width: 8px;
   height: 8px;
@@ -345,23 +335,61 @@ section{
   background-color: black;
 }
 
-#ball {
+.ball {
   position: absolute;
   bottom: -10px;
   left: -10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: black;
 }
 
 
+.ml15 {
+  margin-right: 400px;
+  font-weight: 800;
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -.5rem 0 0 -.5rem;
+  border: 1px solid currentColor;
+  transform: scale(0);
+}
+
+.square{
+  width: 50px;
+  height: 80px;
+  margin: 40px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.bvideo{
+  position: "absolute";
+  top: -100px;
+  z-index: -2;
+  object-fit: cover;
+  width :100%;
 
 
 
 
 
-
+}
 /*////////////////////////////////WEB STYLE/////////////////////////
 //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////// */
