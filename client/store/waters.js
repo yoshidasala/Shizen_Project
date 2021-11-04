@@ -1,6 +1,6 @@
 import axios from "axios";
 const TOKEN = "token";
-
+import 'regenerator-runtime/runtime'
 /**
  * ACTION TYPES
  */
@@ -28,7 +28,7 @@ export const fetchWaters = () => {
 /**
  * REDUCER
  */
-export default function (state = {}, action) {
+export default function (state = [], action) {
   switch (action.type) {
     case SET_WATERS:
       return action.waters;

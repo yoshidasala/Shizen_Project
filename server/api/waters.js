@@ -1,7 +1,7 @@
 const router = require("express").Router();
-// const Water = require("../db/water");
+
 const Sequelize = require("sequelize");
-const { Waters } = require("../db/models/waters");
+const Waters = require("../db/models/waters");
 
 // // matches GET requests to /api/waters/
 router.get("/", async (req, res, next) => {

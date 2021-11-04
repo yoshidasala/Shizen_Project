@@ -9,70 +9,70 @@ import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { fetchWaters } from "../store/waters";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+const AllMountains = () => {
+  const waters = useSelector((state) => state.waters);
+  const dispatch = useDispatch();
 
-class AllMountains extends Component {
-  componentDidMount() {
-    // this.props.fetchAll();
-  }
+  useEffect(() => {
+    dispatch(fetchWaters());
+  }, []);
 
-  render() {
-    return (
-      <div>
-        <div className='particles-js'></div>
+  return (
+    <div>
+      <div className='particles-js'></div>
 
-        <div className='container'>
-          <NavBar className='allwaternav'></NavBar>
+      <div className='container'>
+        <NavBar className='allwaternav'></NavBar>
 
-          <video className='bvideo' autoPlay loop muted>
-            <source src='/volcano.mp4' type='video/mp4' />
-          </video>
-          <header>
-            <Typography
-              variant='h1'
-              color='textSecondary'
-              align='center'
-              gutterBottom
-              style={{
-                color: "white",
-              }}
-            >
-              CHI . LAND
-            </Typography>
-            <Typography
-              variant='p'
-              color='textSecondary'
-              align='center'
-              gutterBottom
-            >
-              Japanese people have long appreciated the presence of life in all
-              aspects of nature—from landscapes and climates that change
-              seasonally.Their reverence for natural life enables them to
-              coexist with nature.
-            </Typography>
-          </header>
+        <header>
+          <Typography
+            variant='h1'
+            color='textSecondary'
+            align='center'
+            gutterBottom
+          >
+            CHI . LAND
+          </Typography>
+          <Typography
+            variant='p'
+            color='textSecondary'
+            align='center'
+            gutterBottom
+          >
+            Japanese people have long appreciated the presence of life in all
+            aspects of nature—from landscapes and climates that change
+            seasonally.Their reverence for natural life enables them to coexist
+            with nature.
+          </Typography>
+        </header>
 
-          <div className='content'>
-            <div className='content-images'>
-              <div className='content-image-wrapper two'>
-                <img className='tree' src='./tree.jpg' />
-                <h4>9</h4>
-              </div>
-            </div>
-            <p className='text'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries.Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-            </p>
+        <img
+          className='banner'
+          src='https://images.unsplash.com/photo-1599663096647-fdcf4e951f9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
+        />
+      </div>
+      <div className='content'>
+        <div className='content-images'>
+          <div className='content-image-wrapper two'>
+            <img className='tree' src='./tree.jpg' />
+            <h4>9</h4>
           </div>
         </div>
+        <p className='text'>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries.Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book.
+        </p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default AllMountains;

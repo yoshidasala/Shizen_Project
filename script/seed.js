@@ -27,10 +27,13 @@ const waters = [
 const seed = async () => {
   try {
     await db.sync({ force: true });
+    await Promise.all(
+      waters.map((water) => {
+        return Waters.create(water);
+      })
+    );
 
-    await Waters.create(waters[0]);
 
-    console.log(green("Seeding success!"));
     db.close();
   } catch (err) {
     console.error(red("Oh noes! Something went wrong!"));
@@ -38,7 +41,7 @@ const seed = async () => {
     db.close();
   }
 };
-module.exports = seed;
+
 
 if (require.main === module) {
   seed()
@@ -52,3 +55,4 @@ if (require.main === module) {
       db.close();
     });
 }
+module.exports = seed;

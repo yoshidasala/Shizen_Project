@@ -4,9 +4,9 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import AllWaters from "./AllWaters";
 import AllMountains from "./AllMountains";
-import Other from "./Other"
+import Other from "./Other";
 import { createTheme, ThemeProvider } from "@mui/material";
-import anime from 'animejs/lib/anime.es.js';
+import anime from "animejs/lib/anime.es.js";
 
 const theme = createTheme({
   palette: {
@@ -27,10 +27,22 @@ const Root = () => {
       {" "}
       <Router>
         <main>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/waters' component={AllWaters} />
-          <Route exact path='/mountains' component={AllMountains} />
-          <Route exact path='/other' component={Other} />
+          <Route exact path='/'>
+            {" "}
+            <Home />{" "}
+          </Route>
+          <Route exact path='/waters'>
+            {" "}
+            <AllWaters />{" "}
+          </Route>
+          <Route exact path='/mountains'>
+            {" "}
+            <AllMountains />{" "}
+          </Route>
+          <Route exact path='/other'>
+            {" "}
+            <Other />{" "}
+          </Route>
         </main>
       </Router>
     </ThemeProvider>
