@@ -7,10 +7,8 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "site": "shizen",
-    "public": "public",
+    "public": "build/shizen-7165f",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-
   },
   "emulators": {
     "hosting": {

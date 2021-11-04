@@ -1,24 +1,22 @@
 import React, { Component } from "react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@mui/styles";
 import NavBar from "./NavBar";
+import Anime from "react-anime";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import Anime from "react-anime";
-import { fetchWaters } from "../store/waters";
+import { fetchCollections } from "../store/collections";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const AllWaters = () => {
-  const waters = useSelector((state) => state.waters);
+function Curate(props, state) {
+  const collections = useSelector((state) => state.collections);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchWaters());
+    dispatch(fetchCollections());
   }, []);
-
   return (
     <div className='pagecontainer'>
       <NavBar className='allwaternav'></NavBar>
@@ -37,7 +35,7 @@ const AllWaters = () => {
             gutterBottom
             className='pagetitle'
           >
-            CHI . land
+            collection
           </Typography>
         </Anime>
         <hr className='line' />
@@ -48,10 +46,8 @@ const AllWaters = () => {
           className='pagetext'
           gutterBottom
         >
-          Japanese people have long appreciated the presence of life in all
-          aspects of nature—from landscapes and climates that change
-          seasonally.Their reverence for natural life enables them to coexist
-          with nature.
+          Here you go. A beautiful collection of all the places you are curious
+          about.
         </Typography>
         <Anime
           easing='easeInOutQuad'
@@ -64,32 +60,59 @@ const AllWaters = () => {
           <div className='line'></div>
         </Anime>
       </header>
-      <div className='homewrapper'>
+      {/* <div className='homewrapper'>
         <Grid
           className='imagecontainer'
           container
           spacing={3}
-          padding={22}
+          padding={12}
           justifyContent='center'
         >
-          {waters.map((each) => (
+          {collections.map((each) => (
             <Grid
               key={each.name}
               className='imagewrap'
               item
               xs={12}
-              md={8}
-              lg={4}
+              md={6}
+              lg={3}
             >
               <Paper>
+                {each.name}
                 <img className='eachimage' src={each.imageUrl} />
               </Paper>
             </Grid>
           ))}
         </Grid>
+      </div> */}
+
+      <Anime
+        easing='easeInOutSine'
+        rotate={[0, -60]}
+        duration={3000}
+        direction='alternate'
+        loop={true}
+        justifyContent='center'
+        translateX='30rem'
+      >
+        <div className='pivot'>
+          <div className='ball' />
+        </div>
+      </Anime>
+      <div className='content'>
+        <div className='content-images'></div>
+        <p className='text'>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries.Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book.
+        </p>
       </div>
     </div>
   );
-};
+}
 
-export default AllWaters;
+export default Curate;

@@ -1,12 +1,8 @@
 const router = require("express").Router();
 
 router.use("/waters", require("./waters"));
-
-// For your `/api/puppies` routes:
-// router.use('/puppies', require('./puppies'))
-//
-// And for your `/api/kittens` routes:
-// router.use('/kittens', require('./kittens'))
+router.use("/collection", require("./collection"));
+router.use("/mountains", require("./mountains"));
 
 // If someone makes a request that starts with `/api`,
 // but you DON'T have a corresponding router, this piece of

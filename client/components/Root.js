@@ -4,7 +4,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import AllWaters from "./AllWaters";
 import AllMountains from "./AllMountains";
-import Other from "./Other";
+import Curate from "./Curate";
 import { createTheme, ThemeProvider } from "@mui/material";
 import anime from "animejs/lib/anime.es.js";
 
@@ -39,9 +39,9 @@ const Root = () => {
             {" "}
             <AllMountains />{" "}
           </Route>
-          <Route exact path='/other'>
+          <Route exact path='/curate'>
             {" "}
-            <Other />{" "}
+            <Curate />{" "}
           </Route>
         </main>
       </Router>

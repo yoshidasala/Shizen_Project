@@ -1,29 +1,78 @@
 const { db } = require("../server/db");
 const Waters = require("../server/db/models/waters");
-
+const Collections = require("../server/db/models/collection");
+const Mountains = require("../server/db/models/mountains");
 const { green, red } = require("chalk");
+
 
 const waters = [
   {
     name: "Sendai",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
     imageUrl:
-      "https://images.unsplash.com/photo-1615839377917-bc950e77a6d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1126&q=80",
+      "https://images.pexels.com/photos/5500780/pexels-photo-5500780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   },
   {
-    name: "Kawarahashi",
+    name: "Yamanashi",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
     imageUrl:
-      "https://images.unsplash.com/photo-1614281195492-55ac268424d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=679&q=80",
+      "https://images.pexels.com/photos/5768842/pexels-photo-5768842.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+  },
+
+  {
+    name: "Shizuoka",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.pexels.com/photos/7982398/pexels-photo-7982398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   },
   {
-    name: "Sonomama",
+    name: "Nikko",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
     imageUrl:
-      "https://images.unsplash.com/photo-1598751654513-bd903cff4b0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://images.pexels.com/photos/5768842/pexels-photo-5768842.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
   },
 ];
 
+const mountains = [
+  {
+    name: "Aoyama",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.pexels.com/photos/7126572/pexels-photo-7126572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    level: 4,
+    collectionid: 1,
+  },
+  {
+    name: "Hakone",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.pexels.com/photos/6827261/pexels-photo-6827261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    level: 2,
+    collectionid: 4,
+  },
+  {
+    name: "Izu",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+    imageUrl:
+      "https://images.pexels.com/photos/5236400/pexels-photo-5236400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    level: 1,
+    collectionid: 2,
+  },
+];
+const collections = [
+  {
+    name: "Grey",
+
+  },
+  {
+    name: "Sam",
+
+  },
+  {
+    name: "Cody",
+
+  },
+];
 const seed = async () => {
   try {
     await db.sync({ force: true });
@@ -33,6 +82,16 @@ const seed = async () => {
       })
     );
 
+    await Promise.all(
+      mountains.map((mount) => {
+        return Mountains.create(mount);
+      })
+    );
+    await Promise.all(
+      collections.map((collect) => {
+        return Collections.create(collect);
+      })
+    );
 
     db.close();
   } catch (err) {
@@ -41,7 +100,6 @@ const seed = async () => {
     db.close();
   }
 };
-
 
 if (require.main === module) {
   seed()
@@ -55,4 +113,5 @@ if (require.main === module) {
       db.close();
     });
 }
+
 module.exports = seed;

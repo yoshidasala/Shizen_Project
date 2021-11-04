@@ -8,68 +8,87 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import { CardMedia } from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { fetchWaters } from "../store/waters";
+import Anime from "react-anime";
+import mountains, { fetchMountains } from "../store/mountains";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 const AllMountains = () => {
-  const waters = useSelector((state) => state.waters);
+  const mountains = useSelector((state) => state.mountains);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchWaters());
+    dispatch(fetchMountains());
   }, []);
 
   return (
-    <div>
-      <div className='particles-js'></div>
-
-      <div className='container'>
-        <NavBar className='allwaternav'></NavBar>
-
-        <header>
+    <div className='pagecontainer'>
+      <NavBar className='allwaternav'></NavBar>
+      <header>
+        <Anime
+          easing='easeInOutSine'
+          duration={3000}
+          direction='alternate'
+          loop={false}
+          translateX='10px'
+        >
           <Typography
             variant='h1'
             color='textSecondary'
             align='center'
             gutterBottom
+            className='pagetitle'
           >
-            CHI . LAND
+            CHI . land
           </Typography>
-          <Typography
-            variant='p'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-          >
-            Japanese people have long appreciated the presence of life in all
-            aspects of nature—from landscapes and climates that change
-            seasonally.Their reverence for natural life enables them to coexist
-            with nature.
-          </Typography>
-        </header>
+        </Anime>
+        <hr className='line' />
 
-        <img
-          className='banner'
-          src='https://images.unsplash.com/photo-1599663096647-fdcf4e951f9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
-        />
-      </div>
-      <div className='content'>
-        <div className='content-images'>
-          <div className='content-image-wrapper two'>
-            <img className='tree' src='./tree.jpg' />
-            <h4>9</h4>
-          </div>
-        </div>
-        <p className='text'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries.Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book.
-        </p>
+        <Typography
+          color='main'
+          align='center'
+          className='pagetext'
+          gutterBottom
+        >
+          Japanese people have long appreciated the presence of life in all
+          aspects of nature—from landscapes and climates that change
+          seasonally.Their reverence for natural life enables them to coexist
+          with nature.
+        </Typography>
+        <Anime
+          easing='easeInOutQuad'
+          duration={3000}
+          width='100%'
+          direction='linear'
+          loop={false}
+          // translateX= {[200, 250]}
+        >
+          <div className='line'></div>
+        </Anime>
+      </header>
+      <div className='homewrapper'>
+        <Grid
+          className='imagecontainer'
+          container
+          spacing={3}
+          padding = {22}
+          justifyContent='center'
+        >
+          {mountains.map((each) => (
+            <Grid
+              key={each.name}
+              className='imagewrap'
+              item
+              xs={12}
+              md={8}
+              lg={4}
+            >
+              <Paper>
+                <img className='eachimage' src={each.imageUrl} />
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </div>
   );

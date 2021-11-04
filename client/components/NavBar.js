@@ -33,9 +33,9 @@ function NavBar() {
         </Link>
       </Button>
       <Button color='primary' size='large'>
-        <Link className={`navbuttontxt ${classes.btn}`} to='/other'>
+        <Link className={`navbuttontxt ${classes.btn}`} to='/curate'>
           {" "}
-          SUGI
+          CURATE
         </Link>
       </Button>
     </div>
