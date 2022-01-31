@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 router.use("/waters", require("./waters"));
-router.use("/collection", require("./collection"));
+router.use("/collection", require("./users"));
 router.use("/mountains", require("./mountains"));
 
 // If someone makes a request that starts with `/api`,

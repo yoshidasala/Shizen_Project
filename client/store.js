@@ -9,9 +9,12 @@ const rootReducer = combineReducers({
   waters: watersReducer,
   mountains: mountainsReducer,
   collections: collectionsReducer,
+
 });
 
 export default createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware, createLogger())
 );
+
+export * from '../client/components/Curate'

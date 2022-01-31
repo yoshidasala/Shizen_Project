@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Anime from "react-anime";
 import { fetchWaters } from "../store/waters";
+import { BackgroundColor } from "chalk";
 
 const AllWaters = () => {
   const waters = useSelector((state) => state.waters);
@@ -22,7 +23,9 @@ const AllWaters = () => {
   return (
     <div className='pagecontainer'>
       <NavBar className='allwaternav'></NavBar>
-      <header>
+      <div className="watercontainer">
+
+        <div className></div>
         <Anime
           easing='easeInOutSine'
           duration={3000}
@@ -36,8 +39,11 @@ const AllWaters = () => {
             align='center'
             gutterBottom
             className='pagetitle'
+            style={{
+              fontSize: "70px",
+            }}
           >
-            CHI . land
+            SUI . WATER
           </Typography>
         </Anime>
         <hr className='line' />
@@ -45,7 +51,9 @@ const AllWaters = () => {
         <Typography
           color='main'
           align='center'
-          className='pagetext'
+          style={{
+            fontFamily: "Open Sans,sans-serif",
+          }}
           gutterBottom
         >
           Japanese people have long appreciated the presence of life in all
@@ -63,32 +71,30 @@ const AllWaters = () => {
         >
           <div className='line'></div>
         </Anime>
-      </header>
-      <div className='homewrapper'>
-        <Grid
-          className='imagecontainer'
-          container
-          spacing={3}
-          padding={22}
-          justifyContent='center'
-        >
-          {waters.map((each) => (
-            <Grid
-              key={each.name}
-              className='imagewrap'
-              item
-              xs={12}
-              md={8}
-              lg={4}
-            >
-              <Paper>
-                <img className='eachimage' src={each.imageUrl} />
-              </Paper>
-            </Grid>
+        <h2 className="products-header"> All Peachy Furniture</h2>
+      <div className="all-furniture">
+        <div className="furniture-grid">
+          {waters.map((product) => (
+            <div key={product.id} className="furniture-item">
+              <Link to={`/products/${product.id}`}>
+                <img
+                  src={product.imageUrl}
+                  className="images"
+                />
+                <p>{product.name}</p>
+              </Link>
+              <p>${product.price}</p>
+            </div>
           ))}
-        </Grid>
+        </div>
+        </div>
       </div>
-    </div>
+      </div>
+
+
+
+
+
   );
 };
 

@@ -1,18 +1,18 @@
 const db = require("./database");
 const Waters = require("./models/waters");
-const Collection = require("./models/collection");
+const User = require("./models/users");
 const Mountains = require("./models/mountains");
 
-Collection.hasMany(Waters);
-Waters.belongsTo(Collection);
+User.hasMany(Waters);
+Waters.belongsTo(User);
 
-Collection.hasMany(Mountains);
-Mountains.belongsTo(Collection);
+User.hasMany(Mountains);
+Mountains.belongsTo(User);
 
 module.exports = {
   // Include your models in this exports object as well!
   db,
   Waters,
-  Collection,
+  User,
   Mountains,
 };

@@ -14,17 +14,17 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const AllMountains = () => {
-  const mountains = useSelector((state) => state.mountains);
-  const dispatch = useDispatch();
+  // const mountains = useSelector((state) => state.mountains);
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchMountains());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchMountains());
+  // }, []);
 
   return (
     <div className='pagecontainer'>
       <NavBar className='allwaternav'></NavBar>
-      <header>
+      <header classnName='pageTitle'>
         <Anime
           easing='easeInOutSine'
           duration={3000}
@@ -38,17 +38,23 @@ const AllMountains = () => {
             align='center'
             gutterBottom
             className='pagetitle'
+            style={{
+              fontSize: "70px",
+            }}
           >
-            CHI . land
+            CHI . LAND
           </Typography>
         </Anime>
+
         <hr className='line' />
 
         <Typography
           color='main'
           align='center'
-          className='pagetext'
           gutterBottom
+          style={{
+            fontFamily: "Open Sans,sans-serif",
+          }}
         >
           Japanese people have long appreciated the presence of life in all
           aspects of nature—from landscapes and climates that change
@@ -66,29 +72,8 @@ const AllMountains = () => {
           <div className='line'></div>
         </Anime>
       </header>
-      <div className='homewrapper'>
-        <Grid
-          className='imagecontainer'
-          container
-          spacing={3}
-          padding = {22}
-          justifyContent='center'
-        >
-          {mountains.map((each) => (
-            <Grid
-              key={each.name}
-              className='imagewrap'
-              item
-              xs={12}
-              md={8}
-              lg={4}
-            >
-              <Paper>
-                <img className='eachimage' src={each.imageUrl} />
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
+      <div className='mountainContainer'>
+        <div className="singleMountain"></div>
       </div>
     </div>
   );

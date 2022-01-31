@@ -1,12 +1,21 @@
 import React from "react";
-import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  HashRouter as Router,
+  withRouter,
+  Route,
+  Link,
+  Switch,
+} from "react-router-dom";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import AllWaters from "./AllWaters";
 import AllMountains from "./AllMountains";
+import Landing from "./Landing";
 import Curate from "./Curate";
+import { me } from "../store/collections";
 import { createTheme, ThemeProvider } from "@mui/material";
 import anime from "animejs/lib/anime.es.js";
+import { connect } from "react-redux";
 
 const theme = createTheme({
   palette: {
@@ -40,8 +49,10 @@ const Root = () => {
             <AllMountains />{" "}
           </Route>
           <Route exact path='/curate'>
-            {" "}
-            <Curate />{" "}
+            <Curate />
+          </Route>
+          <Route exact path='/landing'>
+            <Landing />
           </Route>
         </main>
       </Router>
@@ -49,4 +60,12 @@ const Root = () => {
   );
 };
 
-export default Root;
+const mapDispatch = (dispatch) => {
+  return {
+    loadInitialData() {
+      dispatch(me());
+    },
+  };
+};
+
+export default withRouter(connect(null, mapDispatch)(Root));

@@ -1,9 +1,8 @@
-const { db } = require("../server/db");
+const { db, User } = require("../server/db");
 const Waters = require("../server/db/models/waters");
-const Collections = require("../server/db/models/collection");
+
 const Mountains = require("../server/db/models/mountains");
 const { green, red } = require("chalk");
-
 
 const waters = [
   {
@@ -59,18 +58,18 @@ const mountains = [
     collectionid: 2,
   },
 ];
-const collections = [
+const users = [
   {
-    name: "Grey",
-
+    username: "Grey",
+    password: "hello123",
   },
   {
-    name: "Sam",
-
+    username: "Sam",
+    password: "goodbye123",
   },
   {
-    name: "Cody",
-
+    username:"Cody",
+    password: "computer123",
   },
 ];
 const seed = async () => {
@@ -88,8 +87,8 @@ const seed = async () => {
       })
     );
     await Promise.all(
-      collections.map((collect) => {
-        return Collections.create(collect);
+      users.map((user) => {
+        return User.create(user);
       })
     );
 
