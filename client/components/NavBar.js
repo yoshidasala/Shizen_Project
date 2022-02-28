@@ -21,7 +21,7 @@ function NavBar() {
         </Link>
       </Button>
       <Button color='primary' size='large'>
-        <Link className={`navbuttontxt ${classes.btn}`} to='/waters'>
+        <Link className={`navbuttontxt ${classes.btn}`} to='/mountains'>
           {" "}
           SUI
         </Link>

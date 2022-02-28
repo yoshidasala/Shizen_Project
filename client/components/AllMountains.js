@@ -14,47 +14,54 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const AllMountains = () => {
-  // const mountains = useSelector((state) => state.mountains);
-  // const dispatch = useDispatch();
+  const mountains = useSelector((state) => state.mountains);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchMountains());
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchMountains());
+  }, []);
 
   return (
-    <div className='pagecontainer'>
+    
+    <div >
       <NavBar className='allwaternav'></NavBar>
-      <header classnName='pageTitle'>
-        <h1
-          variant='h1'
-          color='textSecondary'
-          align='center'
-          gutterBottom
-          className='pagetitle'
-          style={{
-            fontSize: "70px",
-          }}
-        >
+
+         
+        <header className= "header">
+        <h1 className = "title">
           CHI . LAND
         </h1>
-
-        <hr className='line' />
-
-        <h2
-          color='main'
-          align='center'
-          gutterBottom
-          style={{
-            fontFamily: "Open Sans,sans-serif",
-          }}
-        >
+        
+        <h2  className = "subTitle" >
           Japanese people have long appreciated the presence of life in all
           aspects of nature—from landscapes and climates that change
           seasonally.Their reverence for natural life enables them to coexist
           with nature.
         </h2>
       </header>
-      <div>hello</div>
+        <div className='allcontainer'>
+          {mountains.length > 0
+            ? mountains.map((mountain) => (
+                <div className='eachcontainer' key={mountain.id}>
+                  <div>
+                    <Link to={`/mountains/${mountain.id}`}>
+                      <img className='eachimages' src={mountain.imageUrl} />
+                    </Link>
+                  </div>
+                  <div className='mountaininfo'>
+                    <Link to={`/mountains/${mountain.id}`}>
+                      <h2>{mountain.name}</h2>
+                    </Link>
+                  </div>
+                  
+                  <div></div>
+                </div>
+              ))
+            : "There are no mountains registered in the database"}
+        </div>
+      
+     
+      
     </div>
   );
 };

@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import NavBar from "./NavBar";
-import AllWaters from "./AllWaters";
+
 import AllMountains from "./AllMountains";
 import Landing from "./Landing";
 import Curate from "./Curate";
@@ -40,10 +40,7 @@ const Root = () => {
             {" "}
             <Home />{" "}
           </Route>
-          <Route exact path='/waters'>
-            {" "}
-            <AllWaters />{" "}
-          </Route>
+
           <Route exact path='/mountains'>
             {" "}
             <AllMountains />{" "}
