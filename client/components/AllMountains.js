@@ -25,30 +25,22 @@ const AllMountains = () => {
     <div className='pagecontainer'>
       <NavBar className='allwaternav'></NavBar>
       <header classnName='pageTitle'>
-        <Anime
-          easing='easeInOutSine'
-          duration={3000}
-          direction='alternate'
-          loop={false}
-          translateX='10px'
+        <h1
+          variant='h1'
+          color='textSecondary'
+          align='center'
+          gutterBottom
+          className='pagetitle'
+          style={{
+            fontSize: "70px",
+          }}
         >
-          <Typography
-            variant='h1'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-            className='pagetitle'
-            style={{
-              fontSize: "70px",
-            }}
-          >
-            CHI . LAND
-          </Typography>
-        </Anime>
+          CHI . LAND
+        </h1>
 
         <hr className='line' />
 
-        <Typography
+        <h2
           color='main'
           align='center'
           gutterBottom
@@ -60,21 +52,9 @@ const AllMountains = () => {
           aspects of nature—from landscapes and climates that change
           seasonally.Their reverence for natural life enables them to coexist
           with nature.
-        </Typography>
-        <Anime
-          easing='easeInOutQuad'
-          duration={3000}
-          width='100%'
-          direction='linear'
-          loop={false}
-          // translateX= {[200, 250]}
-        >
-          <div className='line'></div>
-        </Anime>
+        </h2>
       </header>
-      <div className='mountainContainer'>
-        <div className="singleMountain"></div>
-      </div>
+      <div>hello</div>
     </div>
   );
 };
