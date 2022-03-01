@@ -8,6 +8,7 @@
   color: #292930;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   background: #f5f4f0;
   margin-top: 0px;
@@ -18,7 +19,7 @@ body {
 }
 
 @media screen and (min-width: 300px) {
-  .homepagecontainer {
+  .home {
     width: 100%;
   }
 
@@ -41,7 +42,7 @@ body {
     display: flex;
     justify-self: center;
     width: 60%;
- 
+
   }
  
   .mainContainer{
@@ -58,7 +59,7 @@ body {
     font-family: "Work Sans", sans-serif;
     justify-content: flex-end;
     background-color: Transparent;
-    z-index: -1;
+    position: absolute;
 
   }
   .navbutton {
@@ -80,22 +81,19 @@ body {
 
   /*  banner video */
   .bvideo{
-    width: 100vw;
-    margin-top: -50px;
+    width: 100%;
+    position: fixed;
+    z-index: -5;
   }
 
   .banner {
-    width: auto;
-    background-image: url(https://images.unsplash.com/photo-1599663096647-fdcf4e951f9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
-    position: relative;
-    background-color: transparent;
-    background-position: center;
-    opacity: 85%;
-    background-repeat: no-repeat;
-    filter: drop-shadow(10px 10px 30px #aeaec0 40%);
-    background-size: cover;
-    z-index: -1;
 
+    height: 100%;
+    width: 100%;
+    float: left;
+    top: 0;
+    padding: none;
+    position: fixed;
   }
   .wrapper {
     display: grid;

@@ -7,8 +7,7 @@ import Anime, { anime } from "react-anime";
 
 function Home() {
   return (
-    <div className='homepagecontainer'>
-      <div className='main'>
+    <div className='home'>
         <NavBar className='homenav'></NavBar>
 
         <Typography
@@ -49,7 +48,6 @@ function Home() {
         <video className='bvideo' autoPlay loop muted>
           <source src='/volcano.mp4' type='video/mp4' />
         </video>
-      </div>
     </div>
   );
 }
