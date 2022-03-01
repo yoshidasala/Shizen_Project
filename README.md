@@ -1,6 +1,6 @@
 # shizen
 
-Welcome to Shizen. A web applicaton made to explore the presence of life in all aspects of nature in Japan.
+Welcome to Shizen. A web application made to explore the presence of life in all aspects of nature in Japan.
 coming soon...
 <br />
 <br />
