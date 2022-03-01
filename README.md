@@ -1,4 +1,4 @@
-# Shizen_Project
+# Shizen
 
 Welcome to Shizen. A web applicaton made to explore the presence of life in all aspects of nature in Japan
 <br />
