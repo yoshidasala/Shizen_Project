@@ -1,14 +1,15 @@
-# Shizen
+# shizen
 
-Welcome to Shizen. A web applicaton made to explore the presence of life in all aspects of nature in Japan
+Welcome to Shizen. A web applicaton made to explore the presence of life in all aspects of nature in Japan.
+coming soon...
 <br />
 <br />
 
-## About Shizen
+## about shizen
 ...
-## Features
+## features
 ...
-## Tech Stack
+## tech stack
 
 - ![React](https://img.shields.io/badge/-React-05122A?style=plastic&color=1ea9f5&logo=react)
 - ![Redux](https://img.shields.io/badge/-Redux-05122A?style=plastic&color=a084f7&logo=redux&logoColor=6131AE)
@@ -20,9 +21,5 @@ Welcome to Shizen. A web applicaton made to explore the presence of life in all 
 
 Built with <a href="https://github.com/FullstackAcademy/boilermaker" target="_blank" >Fullstack Academy Boilermaker</a>
 
-## The Engineer
-
-Sala Yoshida
 
 
-Coming soon...
