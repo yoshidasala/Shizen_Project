@@ -1,15 +1,15 @@
-# shizen
+# Shizen
 
 Welcome to Shizen. A web application made to explore the presence of life in all aspects of nature in Japan.
 coming soon...
 <br />
 <br />
 
-## about shizen
+## About Shizen
 ...
-## features
+## Features
 ...
-## tech stack
+## Tech Stack
 
 - ![React](https://img.shields.io/badge/-React-05122A?style=plastic&color=1ea9f5&logo=react)
 - ![Redux](https://img.shields.io/badge/-Redux-05122A?style=plastic&color=a084f7&logo=redux&logoColor=6131AE)
