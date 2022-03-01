@@ -58,8 +58,8 @@ body {
     width: 100%;
     font-family: "Work Sans", sans-serif;
     justify-content: flex-end;
-    background-color: Transparent;
-    position: absolute;
+  
+    
 
   }
   .navbutton {
@@ -84,6 +84,7 @@ body {
     width: 100%;
     position: fixed;
     z-index: -5;
+    margin-top: -50px;
   }
 
   .banner {

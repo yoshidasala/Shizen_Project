@@ -18,9 +18,7 @@ const AllMountains = () => {
   return (
     
     <div className = "chi">
-      <NavBar className='allwaternav'></NavBar>
-
-         
+      <NavBar ></NavBar>
         <header className= "header">
         <h1 className = "title">
           CHI . LAND
