@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { Button } from "@mui/material";
-import { CardMedia } from "@mui/material";
-import Anime from "react-anime";
+
 import mountains, { fetchMountains } from "../store/mountains";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,7 +17,7 @@ const AllMountains = () => {
 
   return (
     
-    <div >
+    <div className = "chi">
       <NavBar className='allwaternav'></NavBar>
 
          
@@ -48,13 +42,6 @@ const AllMountains = () => {
                       <img className='eachimages' src={mountain.imageUrl} />
                     </Link>
                   </div>
-                  <div className='mountaininfo'>
-                    <Link to={`/mountains/${mountain.id}`}>
-                      <h2>{mountain.name}</h2>
-                    </Link>
-                  </div>
-                  
-                  <div></div>
                 </div>
               ))
             : "There are no mountains registered in the database"}
