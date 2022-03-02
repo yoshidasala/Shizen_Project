@@ -40,7 +40,6 @@ const Root = () => {
             {" "}
             <Home />{" "}
           </Route>
-
           <Route exact path='/mountains'>
             {" "}
             <AllMountains />{" "}
