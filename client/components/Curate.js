@@ -24,24 +24,7 @@ function Curate(props) {
     <div className='pagecontainer'>
       <NavBar className='allwaternav'></NavBar>
       <header>
-        <Anime
-          easing='easeInOut'
-          duration={2000}
-          direction='alternate'
-          loop={false}
-        >
-          <Typography
-            variant='h1'
-            color='textSecondary'
-            align='center'
-            gutterBottom
-            style={{
-              fontSize: "70px",
-            }}
-          >
-            collection
-          </Typography>
-        </Anime>
+        
         <hr className='line' />
         <hr className='circle' />
 
