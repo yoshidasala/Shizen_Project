@@ -36,7 +36,7 @@ import { useDispatch, useSelector } from "react-redux";
               </div>
             </div>
           ))
-        : "There are no mountains registered in the database"}
+        : ""}
     </div>
   
  
