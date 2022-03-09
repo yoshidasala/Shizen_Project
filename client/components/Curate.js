@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@mui/styles";
+
 import NavBar from "./NavBar";
 import { connect } from "react-redux";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
+
+
 import { fetchCollections } from "../store/collections";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Anime from "react-anime";
 
-import { authenticate } from "../store/collections";
+
 
 function Curate(props) {
   // const dispatch = useDispatch();
